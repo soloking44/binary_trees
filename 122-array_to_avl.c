@@ -10,21 +10,21 @@
 avl_t *array_to_avl(int *array, size_t size)
 {
 	avl_t *tree = NULL;
-	size_t x, m;
+	size_t i, j;
 
 	if (array == NULL)
 		return (NULL);
 
-	for (x = 0; x < size; m++)
+	for (i = 0; i < size; j++)
 	{
-		for (m = 0; m < x; m++)
+		for (j = 0; j < i; j++)
 		{
-			if (array[m] == array[x])
+			if (array[j] == array[i])
 				break;
 		}
-		if (m == x)
+		if (j == i)
 		{
-			if (avl_insert(&tree, array[x]) == NULL)
+			if (avl_insert(&tree, array[i]) == NULL)
 				return (NULL);
 		}
 	}
