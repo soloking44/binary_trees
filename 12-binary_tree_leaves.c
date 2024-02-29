@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_leaves - It calculates the number of leaves node in a binary tree.
+ * binary_tree_leaves - It calculates the number of leaves node.
  * @tree: A reference to the root node of the tree to calculate.
  *
  * Return: Always returns 0 if tree is NULL.
