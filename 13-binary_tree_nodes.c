@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_nodes - It catculates the nodes have at least one child in a binary tree.
+ * binary_tree_nodes - It catculates the nodes have at least one child.
  * @tree: A reference to the root node of the tree that calculate the nodes.
  *
  * Return: Upon NULL, the process returns 0, otherwise returns node.
