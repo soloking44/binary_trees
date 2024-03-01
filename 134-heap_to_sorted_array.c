@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * tree_size - Determines the amount of heights in binary tree
- * @tree: Reference to the root node in tree to detemine
+ * tree_size - Determines the total of heights in tree
+ * @tree: Reference to the root node of the tree that determines
  *
- * Return: Upon 0 NULL
+ * Return: Height or 0 if tree is NULL
  */
 size_t tree_size(const binary_tree_t *tree)
 {
@@ -24,30 +24,30 @@ size_t tree_size(const binary_tree_t *tree)
 }
 
 /**
- * heap_to_sorted_array - changes a Binary Max Heap
- * to a ordered array of numbers
+ * heap_to_sorted_array - Arrange the Binary Max Heap
+ * in order to array of numbers
  *
- * @heap: Reference to the root node in heap to change
- * @size: Address to save the size in array
+ * @heap: Reference to the root node in the heap
+ * @size: An address to save the size of the array
  *
- * Return: Reference to array ordered in descending way
+ * Return: Reference to array arranged in order
  **/
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
-	int i, *a = NULL;
+	int x, *k = NULL;
 
 	if (!heap || !size)
 		return (NULL);
 
 	*size = tree_size(heap) + 1;
 
-	a = malloc(sizeof(int) * (*size));
+	k = malloc(sizeof(int) * (*size));
 
-	if (!a)
+	if (!k)
 		return (NULL);
 
-	for (i = 0; heap; i++)
-		a[i] = heap_extract(&heap);
+	for (x = 0; heap; x++)
+		k[x] = heap_extract(&heap);
 
-	return (a);
+	return (k);
 }
