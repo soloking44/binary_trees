@@ -1,11 +1,11 @@
 #include "binary_trees.h"
 
 /**
- * array_to_avl - It constructs an AVL tree within an array.
- * @array: A reference to the initial attributes of the array.
- * @size: The value of attributes in @array.
+ * array_to_avl - Creates an AVL tree within array.
+ * @array: A reference to the initial factor of the array to be changed.
+ * @size: The value of factors in @array.
  *
- * Return: A reference to the root node generated AVL, or NULL if it fails.
+ * Return: A reference to the root node of the created AVL, or NULL if fail.
  */
 avl_t *array_to_avl(int *array, size_t size)
 {
@@ -15,7 +15,7 @@ avl_t *array_to_avl(int *array, size_t size)
 	if (array == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; j++)
+	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < i; j++)
 		{
